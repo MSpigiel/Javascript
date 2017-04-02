@@ -1,0 +1,166 @@
+body{
+    background-color:#d3d3d3;
+}
+.pageContent{
+    margin-left:auto;
+    margin-right:auto;
+    width:1500px;
+    height:740px;
+}
+
+.boardContainer{
+    margin-top:50px;
+    height: 495px;
+    width: 495px;
+    float:left;
+}
+
+.footer{
+    height: 120px;
+    clear:both;
+}
+
+.leftSidebar{
+    height: 495px;
+    width: 500px;
+    float:left;
+}
+.start{
+    font-family: Arial;
+    color:white;
+    font-weight: 400;
+    padding-top:20px;
+    height: 40px;
+    font-size:18px;
+    text-align: center;
+    width:225px;
+    border-radius:10px;
+    background-color: #337ab7;
+    border: solid 1px #2e6da4;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: 120px;
+}
+.start:hover{
+    background-color:#286090;
+    border-color: #2e6da4;
+    cursor: pointer;
+}
+
+.score{
+    margin-left:150px;
+    margin-top:40px;
+    margin-bottom:120px;
+    font-size:50px;
+}
+.rightSidebar{
+    height: 495px;
+    width: 500px;
+    float:left;
+}
+
+.navBar{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    height: 95px;
+    padding-top:30px;
+}
+
+.field{
+    height:162px;
+    width:162px;
+    position: relative;
+    background-color:#bdbdbd;
+    border-radius:10px;
+    box-shadow: 20px 20px 5px grey;
+}
+
+.field:hover{
+    background-color:#286090;
+    cursor:pointer;
+}
+
+
+
+#field1{
+    float:left;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#field2{
+    border-left:solid 4px black;
+    border-right:solid 4px black;
+    border-radius:0px;
+    float:left;
+}
+
+#field3{
+    float:left;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+}
+
+#field4{
+    border-top:solid 4px black;
+    border-bottom:solid 4px black;
+    border-radius:0px;
+    float:left;
+}
+
+#field5{
+    border:solid 4px black;
+    border-radius:0px;
+    float:left;
+}
+
+#field6{
+    border-top:solid 4px black;
+    border-bottom:solid 4px black;
+    border-radius:0px;
+    float:left;
+}
+
+#field7{
+    float:left;
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    border-bottom-right-radius:0px;
+}
+
+#field8{
+    border-left:solid 4px black;
+    border-right:solid 4px black;
+    border-radius:0px;
+    float:left;
+}
+
+#field9{
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    border-bottom-left-radius:0px;
+    float:left;
+}
+
+.info{
+    float:left;
+    margin-left:40px;
+    margin-right:10px;
+    margin-top:40px;
+}
+
+.figure {
+    color:white;
+    font-family:Arial;
+    font-size:140px;
+    text-align:center;
+    position: absolute;
+    top: 35%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+}

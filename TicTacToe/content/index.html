@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Tic-Tac-Toe game</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
-    <script src="../scripts/ViewUpdater.js"></script>
+
     <script src="../scripts/History.js"></script>
     <script src="../scripts/WinnerChecker.js"></script>
     <script src="../scripts/Game.js"></script>
-
+    <script src="../scripts/ViewUpdater.js"></script>
 </head>
 <body>
 
@@ -20,35 +20,35 @@
 
 
         <div class = "leftSidebar">
-            <div class="start" onclick="Game.restart()">Start/Restart Game</div>
-            <div class="start" onclick="Game.changeStartingPlayer()">Change starting player</div>
+            <div class="start" onclick="View_Updater.restart(historyModule, gameModule)">Start/Restart Game</div>
+            <div class="start" onclick="View_Updater.changeStartingPlayer(historyModule, gameModule)">Change starting player</div>
 
             <div class="info">
                 <div style="text-align:center; font-size:20px; font-weight:800; margin-bottom:10px;">Current turn:</div>
-                <div id="fieldActual" class="field"></div>
+                <div id="fieldActual" class="field"><div class="figure">O</div></div>
             </div>
             <div class="info">
                 <div style="text-align:center; font-size:20px; font-weight:800; margin-bottom:10px;">Starting player:</div>
-                <div id="fieldStarting"class="field"></div>
+                <div id="fieldStarting"class="field"><div class="figure">O</div></div>
             </div>
         </div>
 
 
         <div class = "boardContainer">
 
-            <div id="field1" class="field" onclick="Game.move('1', Winner_Checker, historyModule)"></div>
-            <div id = "field2" class="field" onclick="Game.move('2', Winner_Checker, historyModule)"></div>
-            <div id="field3" class="field" onclick="Game.move('3', Winner_Checker, historyModule)"></div>
+            <div id="field1" class="field" onclick="View_Updater.interceptMove('1', Winner_Checker, historyModule, gameModule)"></div>
+            <div id = "field2" class="field" onclick="View_Updater.interceptMove('2', Winner_Checker, historyModule, gameModule)"></div>
+            <div id="field3" class="field" onclick="View_Updater.interceptMove('3', Winner_Checker, historyModule, gameModule)"></div>
             <div style="clear:both"></div>
 
-            <div id="field4" class="field" onclick="Game.move('4', Winner_Checker, historyModule)"></div>
-            <div id="field5" class="field" onclick="Game.move('5', Winner_Checker, historyModule)"></div>
-            <div id="field6" class="field" onclick="Game.move('6', Winner_Checker, historyModule)"></div>
+            <div id="field4" class="field" onclick="View_Updater.interceptMove('4', Winner_Checker, historyModule, gameModule)"></div>
+            <div id="field5" class="field" onclick="View_Updater.interceptMove('5', Winner_Checker, historyModule, gameModule)"></div>
+            <div id="field6" class="field" onclick="View_Updater.interceptMove('6', Winner_Checker, historyModule, gameModule)"></div>
             <div style = "clear:both;"></div>
 
-            <div id="field7" class="field" onclick="Game.move('7', Winner_Checker, historyModule)"></div>
-            <div id="field8"class="field" onclick="Game.move('8', Winner_Checker, historyModule)"></div>
-            <div id="field9" class="field" onclick="Game.move('9', Winner_Checker, historyModule)"></div>
+            <div id="field7" class="field" onclick="View_Updater.interceptMove('7', Winner_Checker, historyModule, gameModule)"></div>
+            <div id="field8"class="field" onclick="View_Updater.interceptMove('8', Winner_Checker, historyModule, gameModule)"></div>
+            <div id="field9" class="field" onclick="View_Updater.interceptMove('9', Winner_Checker, historyModule, gameModule)"></div>
             <div style="clear:both;"></div>
 
         </div>
@@ -56,9 +56,9 @@
 
         <div class = "rightSidebar">
 
-            <div id="fieldX" class="score"></div>
-            <div id="fieldO" class="score"></div>
-            <div id="fieldD" class="score"></div>
+            <div id="fieldX" class="score"><div>X wins - 0</div></div>
+            <div id="fieldO" class="score"><div>O wins - 0</div></div>
+            <div id="fieldD" class="score"><div>Draws - 0</div></div>
 
         </div>
 

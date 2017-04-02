@@ -1,6 +1,14 @@
 // Karma configuration
 // Generated on Fri Mar 31 2017 09:32:41 GMT+0200 (W. Europe Daylight Time)
 
+var sourcePreprocessors = 'coverage';
+function isDebug(argument) {
+    return argument === '--debug';
+}
+if (process.argv.some(isDebug)) {
+    sourcePreprocessors = [];
+}
+
 module.exports = function(config) {
   config.set({
 
@@ -27,7 +35,7 @@ module.exports = function(config) {
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: { 'scripts/*.js': ['coverage']
+    preprocessors: { 'scripts/*.js': sourcePreprocessors
     },
 
 

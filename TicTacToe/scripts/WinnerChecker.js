@@ -2,7 +2,22 @@ var Winner_Checker = (function () {
     var details = {
         movesCounter: 0,
         gameResolved: false,
-        winner: ''
+        winner: '',
+        announceWinner: function(){
+
+            if(details.gameResolved == true){
+                alert("Wygrywa " + details.winner);
+                details.gameResolved = false;
+                return details.winner;
+            }
+
+            if(details.movesCounter >= 9){
+                alert("Remis");
+                return 'D';
+
+            }
+            return null;
+        }
     };
 
     return {
@@ -46,24 +61,10 @@ var Winner_Checker = (function () {
                 details.gameResolved = true;
             }
 
-            return Winner_Checker.announceWinner();
-        },
-
-        announceWinner: function(){
-
-            if(details.gameResolved == true){
-                alert("Wygrywa " + details.winner);
-                details.gameResolved = false;
-                return details.winner;
-            }
-
-            if(details.movesCounter >= 9){
-                alert("Remis");
-                return 'D';
-
-            }
-            return null;
+            return details.announceWinner();
         }
+
+
         };
 
 })();
